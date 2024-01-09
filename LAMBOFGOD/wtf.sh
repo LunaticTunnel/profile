@@ -998,8 +998,15 @@ rm -rf /root/domain
 #sudo hostnamectl set-hostname $user
 secs_to_human "$(($(date +%s) - ${start}))"
 sudo hostnamectl set-hostname $username
-echo -e "${green} install sukses ${NC}👍"
-sleep 2
+echo -e "\033[95;1m------------------------\033[0m"
+echo -e " \033[41;97;1mINSTALL SUCCES\033[0m"
+echo -e "\033[95;1m------------------------\033[0m"
+echo -e ""
+echo -e ""
+echo -e "${green} Wait in 4 sec...${NC}"
+sleep 4
+clear
 echo ""
-read -p "$( echo -e "Press ${YELLOW}[ ${NC}${YELLOW}Enter${NC} ${YELLOW}]${NC} TO REBOOT") "
+echo ""
+read -p "$( echo -e "Press !! ${YELLOW}[ ${NC}${YELLOW}ENTER${NC} ${YELLOW}]${NC} TO REBOOT") "
 reboot
